@@ -11,9 +11,17 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #0a0f0a;
     color: #ffffff;
     overflow-x: hidden;
+    /* Rich atmospheric green background: bright emerald glow up top,
+       deepening to near-black green at the edges. */
+    background-color: #061109;
+    background-image:
+        radial-gradient(ellipse 90% 55% at 50% -5%, rgba(58, 140, 62, 0.40) 0%, rgba(58, 140, 62, 0) 55%),
+        radial-gradient(ellipse 50% 35% at 50% 8%, rgba(150, 200, 110, 0.16) 0%, rgba(150, 200, 110, 0) 50%),
+        radial-gradient(ellipse 100% 80% at 50% 130%, rgba(15, 45, 20, 0.55) 0%, rgba(15, 45, 20, 0) 60%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 /* ===== HEADER ===== */
@@ -93,7 +101,9 @@ body {
     justify-content: center;
     text-align: center;
     padding: 60px 20px;
-    background: radial-gradient(ellipse at center, #1a2e1a 0%, #0a0f0a 70%);
+    /* Transparent so the page-wide green glow shows through, with an
+       extra emerald pool concentrated behind the hero title. */
+    background: radial-gradient(ellipse 70% 65% at 50% 42%, rgba(46, 125, 50, 0.28) 0%, transparent 65%);
     overflow: hidden;
 }
 
